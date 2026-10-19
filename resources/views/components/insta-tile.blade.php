@@ -1,0 +1,2 @@
+@props(['image'])
+<div class="col-6 col-md-3"><a href="#" class="d-block position-relative overflow-hidden rounded-3 gold-border insta-hover" style="aspect-ratio:1;" aria-label="View on Instagram"><img src="{{ asset($image) }}" alt="LuxeHair by Aisha Instagram post" loading="lazy" class="w-100 h-100" style="object-fit:cover;"><div class="insta-overlay position-absolute w-100 h-100 top-0 start-0 d-grid place-items-center" style="background:rgba(232,184,199,0.6);"><i class="bi bi-instagram" style="font-size:2rem;color:white;"></i></div></a></div>
