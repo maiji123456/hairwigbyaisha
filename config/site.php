@@ -13,7 +13,8 @@ return [
     'handle' => '@LuxeHairByAisha',
     'logo' => 'assets/images/luxehair-logo.png',
     'phone' => '+447539593290',
-    'email' => 'hello@luxehair.co',
+    'email' => 'info@luxhairbyaisha.co.uk',
+    'client_notification_email' => env('CLIENT_NOTIFICATION_EMAIL'),
     'social' => [
         'instagram' => 'https://www.instagram.com/luxehairbyaisha?utm_source=qr',
         'facebook' => 'https://www.facebook.com/share/1MmcokJbP8/?mibextid=wwXIfr',

@@ -229,7 +229,7 @@ class ShopController extends Controller
             'customer' => $validated,
             'items' => $cart,
             'total' => $total,
-            'payment_method' => 'Cash on Delivery',
+            'payment_method' => 'Bank Transfer (Advance Payment)',
             'created_at' => now()->format('Y-m-d H:i:s'),
         ];
 
@@ -237,8 +237,33 @@ class ShopController extends Controller
         session()->forget('cart');
 
         try {
-            Mail::to(config('mail.from.address'))
-                ->send(new OrderPlacedMail($order));
+            $customerEmail = $validated['email'] ?? null;
+            $adminEmail = config('mail.from.address');
+            $clientPersonalEmail = config('site.client_notification_email') ?? env('CLIENT_NOTIFICATION_EMAIL');
+
+            // 1. Send Order Confirmation to Customer
+            if (!empty($customerEmail)) {
+                Mail::to($customerEmail)->send(new OrderPlacedMail($order, isCustomer: true));
+            }
+
+            // 2. Collect all Admin / Owner Notification Recipients
+            $recipients = [];
+            if (!empty($adminEmail)) {
+                $recipients[] = $adminEmail;
+            }
+            if (!empty($clientPersonalEmail)) {
+                // Supports single or multiple comma-separated emails
+                $parts = array_map('trim', explode(',', (string)$clientPersonalEmail));
+                $recipients = array_merge($recipients, $parts);
+            }
+
+            $filteredRecipients = array_values(array_unique(array_filter($recipients, function ($email) use ($customerEmail) {
+                return !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL) && strcasecmp($email, (string)$customerEmail) !== 0;
+            })));
+
+            foreach ($filteredRecipients as $recipient) {
+                Mail::to($recipient)->send(new OrderPlacedMail($order, isCustomer: false));
+            }
         } catch (\Throwable $e) {
             \Illuminate\Support\Facades\Log::warning('Order confirmation email failed: ' . $e->getMessage());
         }

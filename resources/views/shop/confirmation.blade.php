@@ -374,22 +374,55 @@
                 {{-- Payment Method --}}
                 <div class="col-md-6">
                     <h3 class="info-section-title">
-                        <i class="bi bi-wallet2"></i> Payment Information
+                        <i class="bi bi-bank2"></i> Payment Information
                     </h3>
                     <div class="info-box-inner">
                         <div class="d-flex align-items-center gap-3">
-                            <div class="d-grid place-items-center rounded-circle" style="width:42px; height:42px; background:rgba(232,201,106,0.12); color:#E8C96A; font-size:1.25rem;">
-                                <i class="bi bi-cash-stack"></i>
+                            <div class="d-grid place-items-center rounded-circle flex-shrink-0" style="width:42px; height:42px; background:rgba(232,201,106,0.12); color:#E8C96A; font-size:1.25rem;">
+                                <i class="bi bi-bank2"></i>
                             </div>
                             <div>
-                                <strong style="color:#F5F2F0; display:block;">{{ $order['payment_method'] ?? 'Cash on Delivery' }}</strong>
-                                <span style="font-size:0.8rem; color:rgba(245,242,240,0.55);">Payable to courier upon delivery</span>
+                                <strong style="color:#F5F2F0; display:block;">{{ $order['payment_method'] ?? 'Bank Transfer (Advance Payment)' }}</strong>
+                                <span style="font-size:0.8rem; color:#E8C96A; font-weight:600;">Advance Payment Required</span>
                             </div>
                         </div>
 
-                        <div class="mt-3 pt-3 border-top" style="border-color:rgba(255,255,255,0.08)!important; font-size:0.82rem; color:rgba(245,242,240,0.65);">
-                            <i class="bi bi-shield-check me-1" style="color:#E8C96A;"></i>
-                            Tracked express parcel with signature required on receipt.
+                        {{-- Bank Card --}}
+                        <div class="mt-3 p-3 rounded-2" style="background:rgba(0,0,0,0.3); border:1px solid rgba(232,201,106,0.2); font-size:0.82rem;">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span style="color:rgba(245,242,240,0.55);">Bank:</span>
+                                <strong style="color:#FFF;">Nationwide</strong>
+                            </div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <span style="color:rgba(245,242,240,0.55);">Account Name:</span>
+                                <strong style="color:#FFF;">Aisha Hassan ceesay</strong>
+                            </div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <span style="color:rgba(245,242,240,0.55);">Sort Code:</span>
+                                <strong style="color:#E8C96A; font-family:monospace; letter-spacing:1px;">07-04-36</strong>
+                            </div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <span style="color:rgba(245,242,240,0.55);">Account No:</span>
+                                <strong style="color:#E8C96A; font-family:monospace; letter-spacing:1px;">09496385</strong>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span style="color:rgba(245,242,240,0.55);">IBAN:</span>
+                                <strong style="color:#FFF; font-family:monospace; font-size:0.78rem;">GB61 NAIA 0704 3609 4963 85</strong>
+                            </div>
+                        </div>
+
+                        {{-- WhatsApp Button --}}
+                        @php
+                            $waMessage = urlencode("Hello, I have made the advance payment for Order " . ($order['order_number'] ?? '') . " (" . config('site.name', 'LuxeHair by Aisha') . "). Here is my payment screenshot.");
+                        @endphp
+                        <a href="https://wa.me/447539593290?text={{ $waMessage }}" target="_blank" rel="noopener" class="btn btn-sm w-100 mt-3 d-flex align-items-center justify-content-center gap-2" style="background:#25D366; color:#FFFFFF; font-weight:600; border-radius:8px; padding:10px 14px; text-decoration:none;">
+                            <i class="bi bi-whatsapp fs-6"></i>
+                            <span>Send Screenshot on WhatsApp</span>
+                        </a>
+
+                        <div class="mt-2 pt-2 border-top" style="border-color:rgba(255,255,255,0.08)!important; font-size:0.75rem; color:rgba(245,242,240,0.65); line-height:1.4;">
+                            <strong style="color:#E8C96A;"><i class="bi bi-info-circle me-1"></i> Order Policy:</strong>
+                            Orders will strictly be confirmed upon verified receipt of payment. Your parcel will be processed for dispatch as soon as your WhatsApp payment screenshot is confirmed.
                         </div>
                     </div>
                 </div>

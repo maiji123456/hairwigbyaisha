@@ -23,7 +23,7 @@
                         <td style="background:#0b0b0b; padding:30px; text-align:center;">
 
                             <div style="font-size:13px; letter-spacing:3px; text-transform:uppercase; color:#e8c96a;">
-                                New Order
+                                {{ !empty($isCustomer) ? 'Order Confirmation' : 'New Order' }}
                             </div>
 
                             <h1 style="margin:10px 0 0; color:#ffffff; font-size:28px;">
@@ -53,6 +53,17 @@
 
                         </td>
                     </tr>
+
+                    @if(!empty($isCustomer))
+                    <tr>
+                        <td style="padding:15px 30px 0;">
+                            <p style="font-size:15px; color:#333; margin:0; line-height:1.6;">
+                                Hello <strong>{{ $order['customer']['name'] }}</strong>,<br>
+                                Thank you for shopping with <strong>{{ config('site.name', 'LuxeHair by Aisha') }}</strong>! Your order has been placed successfully. Below are your order details:
+                            </p>
+                        </td>
+                    </tr>
+                    @endif
 
 
                     {{-- Customer --}}
@@ -117,15 +128,47 @@
                     <tr>
                         <td style="padding:0 30px 20px;">
 
-                            <div style="background:#f9f9f9; border-radius:8px; padding:15px;">
+                            <div style="background:#faf8f0; border:1px solid #eadca5; border-radius:8px; padding:18px;">
 
-                                <strong>
-                                    Payment Method:
-                                </strong>
+                                <div style="font-size:12px; color:#777; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">
+                                    Payment Method
+                                </div>
 
-                                <span style="color:#a47d18; font-weight:bold;">
+                                <div style="color:#a47d18; font-weight:bold; font-size:16px; margin-bottom:12px;">
                                     {{ $order['payment_method'] }}
-                                </span>
+                                </div>
+
+                                {{-- Bank Details --}}
+                                <table width="100%" cellpadding="4" cellspacing="0" style="font-size:13px; color:#333; border-top:1px dashed #d8c78c; padding-top:10px;">
+                                    <tr>
+                                        <td width="38%" style="color:#666;">Bank Name:</td>
+                                        <td><strong>Nationwide</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color:#666;">Account Name:</td>
+                                        <td><strong>Aisha Hassan ceesay</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color:#666;">Sort Code:</td>
+                                        <td><strong style="color:#a47d18; font-family:monospace; font-size:14px;">07-04-36</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color:#666;">Account Number:</td>
+                                        <td><strong style="color:#a47d18; font-family:monospace; font-size:14px;">09496385</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color:#666;">IBAN:</td>
+                                        <td><strong style="font-family:monospace; font-size:12px;">GB61 NAIA 0704 3609 4963 85</strong></td>
+                                    </tr>
+                                </table>
+
+                                <div style="margin-top:14px; padding:10px 12px; background:#ffffff; border-radius:6px; border:1px solid #e0d5aa; font-size:12px; color:#333; line-height:1.5;">
+                                    📲 <strong>Payment Verification:</strong> Please transfer the order total (<strong>{{ config('site.currency_symbol', '$') }}{{ number_format($order['total'], 2) }}</strong>) and send your payment screenshot to WhatsApp: <strong style="color:#128c7e;">+44 7539 593290</strong> with your Order Number: <strong>{{ $order['order_number'] }}</strong>.
+                                </div>
+
+                                <div style="margin-top:8px; font-size:11px; color:#856404; background:#fff3cd; padding:8px 10px; border-radius:4px; line-height:1.4;">
+                                    ⚠️ <strong>Important Policy:</strong> Orders are strictly confirmed and prepared for dispatch only after payment verification is confirmed.
+                                </div>
 
                             </div>
 
@@ -217,11 +260,11 @@
                         <td style="background:#0b0b0b; padding:22px 30px; text-align:center;">
 
                             <div style="color:#e8c96a; font-size:12px; letter-spacing:2px; text-transform:uppercase;">
-                                Cash on Delivery
+                                Bank Transfer (Advance Payment)
                             </div>
 
                             <p style="color:#999; font-size:12px; margin:8px 0 0;">
-                                A new order has been placed through your website.
+                                {{ !empty($isCustomer) ? 'Thank you for choosing LuxeHair by Aisha. If you have any questions, reply to this email.' : 'A new order has been placed through your website.' }}
                             </p>
 
                         </td>

@@ -733,32 +733,83 @@
 
                     {{-- SECTION 3: PAYMENT METHOD --}}
                     <h2 class="checkout-section-title">
-                        <i class="bi bi-credit-card-2-front-fill"></i>
+                        <i class="bi bi-bank2"></i>
                         Payment Method
                     </h2>
 
-                    <div class="payment-option-card">
-                        <input
-                            type="radio"
-                            name="payment_method_choice"
-                            id="payment_cod"
-                            value="cod"
-                            checked
-                            class="payment-option-radio"
-                        >
+                    <div class="payment-option-card flex-column align-items-stretch" style="cursor:default;">
+                        <div class="d-flex align-items-center gap-3">
+                            <input
+                                type="radio"
+                                name="payment_method_choice"
+                                id="payment_bank"
+                                value="bank_transfer"
+                                checked
+                                class="payment-option-radio"
+                            >
 
-                        <div class="payment-option-icon">
-                            <i class="bi bi-cash-stack"></i>
+                            <div class="payment-option-icon">
+                                <i class="bi bi-bank2"></i>
+                            </div>
+
+                            <div class="flex-grow-1">
+                                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                    <span class="payment-option-title">Bank Transfer / Advance Payment</span>
+                                    <span class="badge" style="background:#E8C96A; color:#0B0B0B; font-size:0.65rem; text-transform:uppercase; letter-spacing:0.1em; border-radius:50px; padding:4px 10px; font-weight:700;">Required</span>
+                                </div>
+                                <div class="payment-option-desc">
+                                    Please transfer the total amount to our bank account below and send the payment confirmation screenshot on WhatsApp.
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="flex-grow-1">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <span class="payment-option-title">Cash on Delivery (Pay upon Arrival)</span>
-                                <span class="badge" style="background:#E8C96A; color:#0B0B0B; font-size:0.65rem; text-transform:uppercase; letter-spacing:0.1em; border-radius:50px; padding:4px 10px;">Available</span>
+                        {{-- Bank Details Card --}}
+                        <div class="bank-details-box mt-3 p-3 rounded-3" style="background:rgba(0,0,0,0.35); border:1px solid rgba(232,201,106,0.25);">
+                            <div class="d-flex align-items-center justify-content-between pb-2 mb-2 border-bottom" style="border-color:rgba(255,255,255,0.08)!important;">
+                                <span style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:#E8C96A; font-weight:600;">
+                                    <i class="bi bi-shield-lock me-1"></i> Official Bank Account Details
+                                </span>
+                                <span style="font-size:0.75rem; color:rgba(245,242,240,0.5);">UK Nationwide Bank</span>
                             </div>
-                            <div class="payment-option-desc">
-                                Pay securely in cash or card directly to the courier when your parcel arrives. Zero advance payment needed.
+
+                            <div class="row g-2" style="font-size:0.85rem;">
+                                <div class="col-sm-6">
+                                    <div style="color:rgba(245,242,240,0.55); font-size:0.72rem; text-transform:uppercase;">Bank Name</div>
+                                    <div style="color:#FFFFFF; font-weight:600;">Nationwide</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div style="color:rgba(245,242,240,0.55); font-size:0.72rem; text-transform:uppercase;">Account Name</div>
+                                    <div style="color:#FFFFFF; font-weight:600;">Aisha Hassan ceesay</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div style="color:rgba(245,242,240,0.55); font-size:0.72rem; text-transform:uppercase;">Sort Code</div>
+                                    <div style="color:#E8C96A; font-weight:700; font-family:monospace; font-size:1rem; letter-spacing:1px;">07-04-36</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div style="color:rgba(245,242,240,0.55); font-size:0.72rem; text-transform:uppercase;">Account Number</div>
+                                    <div style="color:#E8C96A; font-weight:700; font-family:monospace; font-size:1rem; letter-spacing:1px;">09496385</div>
+                                </div>
+                                <div class="col-12 pt-1">
+                                    <div style="color:rgba(245,242,240,0.55); font-size:0.72rem; text-transform:uppercase;">IBAN</div>
+                                    <div style="color:#FFFFFF; font-weight:600; font-family:monospace; font-size:0.88rem; letter-spacing:1px;">GB61 NAIA 0704 3609 4963 85</div>
+                                </div>
                             </div>
+
+                            {{-- WhatsApp Verification Step --}}
+                            <div class="mt-3 pt-3 border-top d-flex align-items-center gap-2" style="border-color:rgba(255,255,255,0.08)!important;">
+                                <div style="width:32px; height:32px; border-radius:50%; background:#25D366; color:#FFFFFF; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:1rem;">
+                                    <i class="bi bi-whatsapp"></i>
+                                </div>
+                                <div style="font-size:0.8rem; color:rgba(245,242,240,0.85); line-height:1.4;">
+                                    After completing the bank transfer, please send your payment receipt to WhatsApp: <strong style="color:#25D366;">+44 7539 593290</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- Professional Note --}}
+                        <div class="mt-3 p-2 px-3 rounded-2" style="background:rgba(232,201,106,0.08); border-left:3px solid #E8C96A; font-size:0.78rem; color:rgba(245,242,240,0.85); line-height:1.45;">
+                            <strong style="color:#E8C96A;"><i class="bi bi-info-circle me-1"></i> Order Policy:</strong>
+                            Orders will strictly be confirmed and dispatched only after payment verification is completed. Please share your transfer receipt on WhatsApp for prompt processing.
                         </div>
                     </div>
 

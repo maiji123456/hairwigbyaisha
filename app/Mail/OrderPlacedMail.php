@@ -18,11 +18,17 @@ class OrderPlacedMail extends Mailable
     public array $order;
 
     /**
+     * Flag whether email is for customer or admin.
+     */
+    public bool $isCustomer;
+
+    /**
      * Create a new message instance.
      */
-    public function __construct(array $order)
+    public function __construct(array $order, bool $isCustomer = false)
     {
         $this->order = $order;
+        $this->isCustomer = $isCustomer;
     }
 
     /**
@@ -30,8 +36,12 @@ class OrderPlacedMail extends Mailable
      */
     public function envelope(): Envelope
     {
+        $subject = $this->isCustomer
+            ? 'Order Confirmation - ' . $this->order['order_number'] . ' | ' . config('site.name', 'LuxeHair by Aisha')
+            : 'New Order Received - ' . $this->order['order_number'];
+
         return new Envelope(
-            subject: 'New Order - ' . $this->order['order_number'],
+            subject: $subject,
         );
     }
 
@@ -44,6 +54,7 @@ class OrderPlacedMail extends Mailable
             view: 'emails.order-placed',
             with: [
                 'order' => $this->order,
+                'isCustomer' => $this->isCustomer,
             ],
         );
     }

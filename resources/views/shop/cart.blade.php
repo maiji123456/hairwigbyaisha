@@ -924,7 +924,7 @@
                         <span class="payment-chip">Amex</span>
                         <span class="payment-chip">Apple Pay</span>
                         <span class="payment-chip">PayPal</span>
-                        <span class="payment-chip">Cash on Delivery</span>
+                        <span class="payment-chip">Bank Transfer</span>
                     </div>
 
                 </div>
