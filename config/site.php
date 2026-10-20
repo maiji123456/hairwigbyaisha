@@ -64,30 +64,30 @@ return [
             'label' => 'Secure Payments',
         ],
     ],
-    'categories' => [
+        'categories' => [
         [
-            'image' => 'assets/images/hnahair-1.jpg',
+            'image' => 'assets/images/products/13x4-lace-front-wigs/image-1.jpg',
             'title' => 'Glueless 13x4 HD Lace Wigs',
             'badge' => 'Bestseller',
         ],
         [
-            'image' => 'assets/images/hnahair-2.jpg',
+            'image' => 'assets/images/products/5x5-closure-wig/image-1.jpg',
             'title' => 'Glueless 5x5 HD Lace Wigs',
             'badge' => 'Popular',
         ],
         [
-            'image' => 'assets/images/hnahair-6.jpg',
-            'title' => '13x6 HD Lace Frontal Wigs',
+            'image' => 'assets/images/products/wholesale-360-lace-wig/image-1.jpg',
+            'title' => '360 HD Lace Wigs',
             'badge' => 'New Season',
         ],
         [
-            'image' => 'assets/images/hnahair-7.jpg',
-            'title' => 'Glueless HD Lace Wigs',
+            'image' => 'assets/images/products/full-lace-wig/image-1.jpg',
+            'title' => 'Full Lace Human Hair Wigs',
             'badge' => 'Premium',
         ],
         [
-            'image' => 'assets/images/hnahair-9.jpg',
-            'title' => 'Bump Hair Bundles',
+            'image' => 'assets/images/products/premium100-virgin-remy-human-hair-bundles/image-1.jpg',
+            'title' => '100% Remy Hair Bundles',
             'badge' => 'Top Value',
         ],
     ],
@@ -99,218 +99,44 @@ return [
     | Clean, modular structure for easy manual editing of prices, lengths,
     | descriptions, images, and details.
     */
-    'products' => [
+        'products' => [
 
         /*
         |--------------------------------------------------------------------------
-        | 1. Glueless 13x4 HD Lace Wigs
+        | 1. 100% virgin remy human hair 5x5 HD lace closure
         |--------------------------------------------------------------------------
         */
         [
-            'id' => 'glueless-13x4-hd-lace-wigs',
-            'name' => 'Glueless 13x4 HD Lace Wigs',
+            'id' => '100-virgin-remy-human-hair-5x5-hd-lace-closure',
+            'name' => '100% Virgin Remy Hair 5x5 HD Lace Closure',
             'badge' => 'Bestseller',
-            'reviews' => 142,
-            'image' => 'assets/images/lacewig/hdwig2.jpg',
+            'reviews' => 110,
+            'image' => 'assets/images/products/100-virgin-remy-human-hair-5x5-hd-lace-closure/image-1.jpg',
             'gallery' => [
-                'assets/images/lacewig/hdwig2.jpg',
-                'assets/images/lacewig/hdwig1.jpg',
-                'assets/images/lacewig/hdwig3.jpg',
-                'assets/images/lacewig/hdwig4.jpg',
-                'assets/images/lacewig/hdwig5.jpg',
-                'assets/images/lacewig/hdwig6.jpg',
-                'assets/images/lacewig/hdwig7.jpg',
-                'assets/images/lacewig/hdwig8.jpg',
-                'assets/images/lacewig/hdwig9.jpg',
-                'assets/images/lacewig/hdwig10.jpg',
-                'assets/images/lacewig/hdwig11.jpg',
-                'assets/images/lacewig/hdwig12.jpg',
-                'assets/images/lacewig/hdwig13.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-5x5-hd-lace-closure/image-1.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-5x5-hd-lace-closure/image-2.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-5x5-hd-lace-closure/image-3.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-5x5-hd-lace-closure/image-4.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-5x5-hd-lace-closure/image-5.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-5x5-hd-lace-closure/image-6.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-5x5-hd-lace-closure/image-7.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-5x5-hd-lace-closure/image-8.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-5x5-hd-lace-closure/image-9.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-5x5-hd-lace-closure/image-10.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-5x5-hd-lace-closure/image-11.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-5x5-hd-lace-closure/image-12.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-5x5-hd-lace-closure/image-13.jpg',
             ],
-            'description' => 'Ultra-luxurious glueless 13x4 HD lace wig with 250% high density for maximum fullness. Pre-plucked natural hairline with invisible Swiss HD lace for an undetectable, seamless melt.',
+            'description' => '',
             'details' => [
-                'Lace Type' => '13x4 HD Swiss Lace (Invisible Melt)',
-                'Hair Density' => 'LSY-250% High Density',
-                'Cap Construction' => '100% Glueless with Adjustable Elastic Band & Combs',
-                'Hair Material' => '100% Virgin Human Hair',
-                'Hairline' => 'Pre-Plucked Natural Hairline with Baby Hair',
+                'Hair Material' => '100% Virgin Remy Human Hair',
+                'Hair Quality' => 'Factory Direct Premium Grade',
                 'Bleached Knots' => 'Clean Lightly Bleached Knots',
-            ],
-            'bulk_discounts' => [],
-            'options' => [
-                [
-                    'name' => 'Length (LSY-250% Density)',
-                    'type' => 'select',
-                    'required' => true,
-                    'values' => [
-                        ['label' => '14"', 'price' => 136.17],
-                        ['label' => '16"', 'price' => 150.45],
-                        ['label' => '18"', 'price' => 165.73],
-                        ['label' => '20"', 'price' => 185.01],
-                        ['label' => '22"', 'price' => 198.81],
-                        ['label' => '24"', 'price' => 213.24],
-                        ['label' => '26"', 'price' => 231.94],
-                        ['label' => '28"', 'price' => 250.78],
-                        ['label' => '30"', 'price' => 267.31],
-                    ],
-                ],
-            ],
-        ],
-
-        /*
-        |--------------------------------------------------------------------------
-        | 2. Glueless 5x5 HD Lace Wigs
-        |--------------------------------------------------------------------------
-        */
-        [
-            'id' => 'glueless-5x5-hd-lace-wigs',
-            'name' => 'Glueless 5x5 HD Lace Wigs',
-            'badge' => 'Popular',
-            'reviews' => 118,
-            'image' => 'assets/images/hnahair-2.jpg',
-            'gallery' => [
-                'assets/images/hnahair-2.jpg',
-                'assets/images/hnahair-5.jpg',
-                'assets/images/hnahair-8.jpg',
-            ],
-            'description' => 'Effortless everyday glamour with our glueless 5x5 HD lace closure wig. 250% density ensures rich, voluptuous thickness from roots to tips, with an ultra-fine HD lace that blends seamlessly into any skin tone.',
-            'details' => [
-                'Lace Type' => '5x5 HD Lace Closure',
-                'Hair Density' => 'LSY-250% High Density',
-                'Cap Construction' => 'Glueless Cap with Non-Slip Elastic Grip Band',
-                'Hair Material' => '100% Virgin Human Hair',
-                'Parting Space' => '5x5 Deep Free Parting',
-                'Bleached Knots' => 'Pre-Plucked & Lightly Bleached',
-            ],
-            'bulk_discounts' => [],
-            'options' => [
-                [
-                    'name' => 'Length (LSY-250% Density)',
-                    'type' => 'select',
-                    'required' => true,
-                    'values' => [
-                        ['label' => '14"', 'price' => 134.60],
-                        ['label' => '16"', 'price' => 145.85],
-                        ['label' => '18"', 'price' => 161.76],
-                        ['label' => '20"', 'price' => 176.12],
-                        ['label' => '22"', 'price' => 190.87],
-                        ['label' => '24"', 'price' => 205.28],
-                        ['label' => '26"', 'price' => 221.78],
-                    ],
-                ],
-            ],
-        ],
-
-        /*
-        |--------------------------------------------------------------------------
-        | 3. 13x6 HD Lace Frontal Wig
-        |--------------------------------------------------------------------------
-        */
-        [
-            'id' => '13x6-hd-lace-frontal-wig',
-            'name' => '13x6 HD Lace Frontal Wig',
-            'badge' => 'Premium',
-            'reviews' => 156,
-            'image' => 'assets/images/hnahair-6.jpg',
-            'gallery' => [
-                'assets/images/hnahair-6.jpg',
-                'assets/images/hnahair-7.jpg',
-                'assets/images/hnahair-3.jpg',
-            ],
-            'description' => 'Deep 6-inch parting space across the full 13-inch ear-to-ear hairline. Premium 250% high density provides supreme movement and body for deep side parts, half-up styles, and high ponytails.',
-            'details' => [
-                'Lace Type' => '13x6 HD Lace Frontal (Deep 6" Parting)',
-                'Hair Density' => 'LSY-250% High Density',
-                'Cap Construction' => 'Breathable Soft Cap with Adjustable Straps & Combs',
-                'Hair Material' => '100% Virgin Human Hair',
-                'Versatility' => 'Ear-to-Ear Free Parting & Ponytail Friendly',
-                'Bleached Knots' => 'Pre-Plucked with Natural Hairline',
-            ],
-            'bulk_discounts' => [],
-            'options' => [
-                [
-                    'name' => 'Length (LSY-250% Density)',
-                    'type' => 'select',
-                    'required' => true,
-                    'values' => [
-                        ['label' => '18"', 'price' => 155.37],
-                        ['label' => '20"', 'price' => 170.46],
-                        ['label' => '22"', 'price' => 183.19],
-                        ['label' => '24"', 'price' => 222.93],
-                        ['label' => '26"', 'price' => 243.61],
-                        ['label' => '28"', 'price' => 261.16],
-                    ],
-                ],
-            ],
-        ],
-
-        /*
-        |--------------------------------------------------------------------------
-        | 4. Glueless HD Lace Wigs
-        |--------------------------------------------------------------------------
-        */
-        [
-            'id' => 'glueless-hd-lace-wigs',
-            'name' => 'Glueless HD Lace Wigs',
-            'badge' => 'Trending',
-            'reviews' => 134,
-            'image' => 'assets/images/hnahair-7.jpg',
-            'gallery' => [
-                'assets/images/hnahair-7.jpg',
-                'assets/images/hnahair-4.jpg',
-                'assets/images/hnahair-1.jpg',
-            ],
-            'description' => 'Signature wear-and-go glueless HD lace wig with 250% density for maximum bounce and silky smooth luster. Designed for quick 30-second styling with zero glue, tape, or hair damage.',
-            'details' => [
-                'Lace Type' => 'Ultra-Thin Invisible HD Lace',
-                'Hair Density' => 'LSY-250% High Density',
-                'Cap Construction' => '3D Dome Stretch Cap with Removable Elastic Band',
-                'Hair Material' => '100% Virgin Human Hair',
-                'Installation' => '100% Ready-to-Wear, No Glue Required',
-                'Longevity' => '1–2+ Years with Standard Care',
-            ],
-            'bulk_discounts' => [],
-            'options' => [
-                [
-                    'name' => 'Length (LSY-250% Density)',
-                    'type' => 'select',
-                    'required' => true,
-                    'values' => [
-                        ['label' => '18"', 'price' => 146.46],
-                        ['label' => '20"', 'price' => 161.26],
-                        ['label' => '22"', 'price' => 181.68],
-                        ['label' => '24"', 'price' => 213.31],
-                        ['label' => '26"', 'price' => 230.14],
-                        ['label' => '28"', 'price' => 246.54],
-                    ],
-                ],
-            ],
-        ],
-
-        /*
-        |--------------------------------------------------------------------------
-        | 5. Bump Hair Bundles
-        |--------------------------------------------------------------------------
-        */
-        [
-            'id' => 'bump-hair-bundles',
-            'name' => 'Bump Hair Bundles',
-            'badge' => 'Top Value',
-            'reviews' => 168,
-            'image' => 'assets/images/hnahair-9.jpg',
-            'gallery' => [
-                'assets/images/hnahair-9.jpg',
-                'assets/images/product-bundles.jpg',
-                'assets/images/hnahair-10.jpg',
-            ],
-            'description' => 'Premium grade 100% human hair Bump bundles. Double machine-wefted to prevent shedding, silky-soft with natural bounce and shine. Can be easily bleached, dyed, straightened, and curled.',
-            'details' => [
-                'Product Type' => 'Bump Hair Bundles / Hair Weft',
-                'Hair Material' => '100% Remy Human Hair',
-                'Weft Quality' => 'Reinforced Double Machine Weft',
-                'Bundle Weight' => '100g (±5g) Per Bundle',
-                'Styling' => 'Bleach, Dye, Perm & Restyle Friendly',
-                'Texture' => 'Smooth, Silky, Shedding & Tangle Free',
+                'Longevity' => '1–2+ Years with proper care',
+                'Styling' => 'Can be dyed, bleached, straightened & curled',
+                'Lace Type' => '5x5 HD Swiss Lace (Invisible Melt)',
+                'Parting Space' => '5x5 Free Parting',
+                'Hairline' => 'Pre-Plucked Natural Hairline with Baby Hair',
             ],
             'bulk_discounts' => [],
             'options' => [
@@ -319,21 +145,409 @@ return [
                     'type' => 'select',
                     'required' => true,
                     'values' => [
-                        ['label' => '10"', 'price' => 17.58],
-                        ['label' => '12"', 'price' => 21.56],
-                        ['label' => '14"', 'price' => 25.59],
-                        ['label' => '16"', 'price' => 29.58],
-                        ['label' => '18"', 'price' => 37.91],
-                        ['label' => '20"', 'price' => 42.81],
-                        ['label' => '22"', 'price' => 46.12],
-                        ['label' => '24"', 'price' => 49.83],
-                        ['label' => '26"', 'price' => 57.39],
-                        ['label' => '28"', 'price' => 61.81],
+                        ['label' => '10"', 'price' => 69.23],
+                        ['label' => '12"', 'price' => 72.09],
+                        ['label' => '14"', 'price' => 76.85],
+                        ['label' => '16"', 'price' => 81.61],
+                        ['label' => '18"', 'price' => 87.33],
+                        ['label' => '20"', 'price' => 102.57],
                     ],
                 ],
             ],
         ],
 
+        /*
+        |--------------------------------------------------------------------------
+        | 2. 100% virgin remy human hair 13x4 HD lace frontal
+        |--------------------------------------------------------------------------
+        */
+        [
+            'id' => '100-virgin-remy-human-hair-13x4-lace-frontal',
+            'name' => '100% Virgin Remy Hair 13x4 HD Lace Frontal',
+            'badge' => 'Trending',
+            'reviews' => 127,
+            'image' => 'assets/images/products/100-virgin-remy-human-hair-13x4-lace-frontal/image-1.jpg',
+            'gallery' => [
+                'assets/images/products/100-virgin-remy-human-hair-13x4-lace-frontal/image-1.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-13x4-lace-frontal/image-2.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-13x4-lace-frontal/image-3.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-13x4-lace-frontal/image-4.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-13x4-lace-frontal/image-5.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-13x4-lace-frontal/image-6.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-13x4-lace-frontal/image-7.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-13x4-lace-frontal/image-8.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-13x4-lace-frontal/image-9.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-13x4-lace-frontal/image-10.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-13x4-lace-frontal/image-11.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-13x4-lace-frontal/image-12.jpg',
+                'assets/images/products/100-virgin-remy-human-hair-13x4-lace-frontal/image-13.jpg',
+            ],
+            'description' => '',
+            'details' => [
+                'Hair Material' => '100% Virgin Remy Human Hair',
+                'Hair Quality' => 'Factory Direct Premium Grade',
+                'Bleached Knots' => 'Clean Lightly Bleached Knots',
+                'Longevity' => '1–2+ Years with proper care',
+                'Styling' => 'Can be dyed, bleached, straightened & curled',
+                'Lace Type' => '13x4 HD Swiss Lace (Ear to Ear)',
+                'Parting Space' => '13x4 Deep Parting',
+                'Hairline' => 'Pre-Plucked Natural Hairline with Baby Hair',
+            ],
+            'bulk_discounts' => [],
+            'options' => [
+                [
+                    'name' => 'Length',
+                    'type' => 'select',
+                    'required' => true,
+                    'values' => [
+                        ['label' => '10"', 'price' => 83.52],
+                        ['label' => '12"', 'price' => 87.33],
+                        ['label' => '14"', 'price' => 94.00],
+                        ['label' => '16"', 'price' => 101.62],
+                        ['label' => '18"', 'price' => 110.19],
+                        ['label' => '20"', 'price' => 129.25],
+                    ],
+                ],
+            ],
+        ],
+
+        /*
+        |--------------------------------------------------------------------------
+        | 3. 100% virgin remy human hair weft 3Pcs bundles - factory direct affordable price
+        |--------------------------------------------------------------------------
+        */
+        [
+            'id' => 'premium100-virgin-remy-human-hair-bundles',
+            'name' => '100% Virgin Remy Human Hair Weft (3Pcs Bundles)',
+            'badge' => 'Hot Value',
+            'reviews' => 144,
+            'image' => 'assets/images/products/premium100-virgin-remy-human-hair-bundles/image-1.jpg',
+            'gallery' => [
+                'assets/images/products/premium100-virgin-remy-human-hair-bundles/image-1.jpg',
+                'assets/images/products/premium100-virgin-remy-human-hair-bundles/image-2.jpg',
+                'assets/images/products/premium100-virgin-remy-human-hair-bundles/image-3.jpg',
+                'assets/images/products/premium100-virgin-remy-human-hair-bundles/image-4.jpg',
+                'assets/images/products/premium100-virgin-remy-human-hair-bundles/image-5.jpg',
+                'assets/images/products/premium100-virgin-remy-human-hair-bundles/image-6.jpg',
+                'assets/images/products/premium100-virgin-remy-human-hair-bundles/image-7.jpg',
+                'assets/images/products/premium100-virgin-remy-human-hair-bundles/image-8.jpg',
+                'assets/images/products/premium100-virgin-remy-human-hair-bundles/image-9.jpg',
+                'assets/images/products/premium100-virgin-remy-human-hair-bundles/image-10.jpg',
+                'assets/images/products/premium100-virgin-remy-human-hair-bundles/image-11.jpg',
+                'assets/images/products/premium100-virgin-remy-human-hair-bundles/image-12.jpg',
+                'assets/images/products/premium100-virgin-remy-human-hair-bundles/image-13.jpg',
+            ],
+            'description' => '',
+            'details' => [
+                'Hair Material' => '100% Virgin Remy Human Hair',
+                'Hair Quality' => 'Factory Direct Premium Grade',
+                'Bleached Knots' => 'Clean Lightly Bleached Knots',
+                'Longevity' => '1–2+ Years with proper care',
+                'Styling' => 'Can be dyed, bleached, straightened & curled',
+                'Product Type' => '3 Pieces Hair Weft Bundles',
+                'Weft Construction' => 'Reinforced Double Machine Weft',
+                'Bundle Weight' => '100g (±5g) per bundle, 300g Total',
+            ],
+            'bulk_discounts' => [],
+            'options' => [
+                [
+                    'name' => 'Length Combinations (3 Bundles)',
+                    'type' => 'select',
+                    'required' => true,
+                    'values' => [
+                        ['label' => '10" + 10" + 10"', 'price' => 109.81],
+                        ['label' => '12" + 12" + 12"', 'price' => 121.24],
+                        ['label' => '10" + 12" + 14"', 'price' => 125.82],
+                        ['label' => '12" + 14" + 16"', 'price' => 144.30],
+                        ['label' => '14" + 14" + 14"', 'price' => 146.40],
+                        ['label' => '14" + 16" + 18"', 'price' => 164.12],
+                        ['label' => '16" + 16" + 16"', 'price' => 165.26],
+                        ['label' => '18" + 18" + 18"', 'price' => 180.69],
+                        ['label' => '16" + 18" + 20"', 'price' => 182.03],
+                        ['label' => '18" + 20" + 22"', 'price' => 199.94],
+                        ['label' => '20" + 20" + 20"', 'price' => 200.13],
+                        ['label' => '22" + 22" + 22"', 'price' => 218.99],
+                        ['label' => '20" + 22" + 24"', 'price' => 223.94],
+                        ['label' => '24" + 24" + 24"', 'price' => 252.72],
+                        ['label' => '22" + 24" + 26"', 'price' => 252.91],
+                        ['label' => '24" + 26" + 28"', 'price' => 286.06],
+                        ['label' => '26" + 26" + 26"', 'price' => 287.01],
+                        ['label' => '28" + 28" + 28"', 'price' => 318.45],
+                        ['label' => '26" + 28" + 30"', 'price' => 319.21],
+                        ['label' => '30" + 30" + 30"', 'price' => 352.18],
+                    ],
+                ],
+            ],
+        ],
+
+        /*
+        |--------------------------------------------------------------------------
+        | 4. 5x5 HD lace closure wig - glueless beginner friendly 100% virgin remy human hair wigs with drawstring - factory direct affordable price
+        |--------------------------------------------------------------------------
+        */
+        [
+            'id' => '5x5-closure-wig',
+            'name' => '5x5 HD Lace Closure Wig (Glueless Wear & Go)',
+            'badge' => 'Popular',
+            'reviews' => 111,
+            'image' => 'assets/images/products/5x5-closure-wig/image-1.jpg',
+            'gallery' => [
+                'assets/images/products/5x5-closure-wig/image-1.jpg',
+                'assets/images/products/5x5-closure-wig/image-2.jpg',
+                'assets/images/products/5x5-closure-wig/image-3.jpg',
+                'assets/images/products/5x5-closure-wig/image-4.jpg',
+                'assets/images/products/5x5-closure-wig/image-5.jpg',
+                'assets/images/products/5x5-closure-wig/image-6.jpg',
+                'assets/images/products/5x5-closure-wig/image-7.jpg',
+                'assets/images/products/5x5-closure-wig/image-8.jpg',
+                'assets/images/products/5x5-closure-wig/image-9.jpg',
+                'assets/images/products/5x5-closure-wig/image-10.jpg',
+                'assets/images/products/5x5-closure-wig/image-11.jpg',
+                'assets/images/products/5x5-closure-wig/image-12.jpg',
+                'assets/images/products/5x5-closure-wig/image-13.jpg',
+            ],
+            'description' => '&nbsp; Textures available Loose deep, deep wave, loose wave, body wave, kinky curly, straight, water wave, kinky straight Hair Color Natural color Feature Undetectable, invisible, Bleached knots, Pre-plucked hairline, pre-cut lace, ready to go Hai...',
+            'details' => [
+                'Hair Material' => '100% Virgin Remy Human Hair',
+                'Hair Quality' => 'Factory Direct Premium Grade',
+                'Bleached Knots' => 'Clean Lightly Bleached Knots',
+                'Longevity' => '1–2+ Years with proper care',
+                'Styling' => 'Can be dyed, bleached, straightened & curled',
+                'Lace Type' => '5x5 HD Swiss Lace',
+                'Cap Construction' => '100% Glueless Wear & Go with Drawstring & Elastic Band',
+                'Installation' => 'Beginner Friendly, 30-Second Wear, Zero Glue',
+            ],
+            'bulk_discounts' => [],
+            'options' => [
+                [
+                    'name' => 'Length & Density',
+                    'type' => 'select',
+                    'required' => true,
+                    'values' => [
+                        ['label' => '16" (180% Density)', 'price' => 131.34],
+                        ['label' => '16" (200% Density)', 'price' => 135.93],
+                        ['label' => '16" (250% Density)', 'price' => 144.30],
+                        ['label' => '18" (180% Density)', 'price' => 146.70],
+                        ['label' => '18" (200% Density)', 'price' => 152.64],
+                        ['label' => '18" (250% Density)', 'price' => 160.30],
+                        ['label' => '20" (180% Density)', 'price' => 160.39],
+                        ['label' => '20" (200% Density)', 'price' => 165.46],
+                        ['label' => '20" (250% Density)', 'price' => 171.86],
+                        ['label' => '22" (180% Density)', 'price' => 185.49],
+                        ['label' => '22" (200% Density)', 'price' => 193.17],
+                        ['label' => '22" (250% Density)', 'price' => 187.87],
+                        ['label' => '24" (180% Density)', 'price' => 200.92],
+                        ['label' => '24" (200% Density)', 'price' => 209.89],
+                        ['label' => '24" (250% Density)', 'price' => 218.10],
+                        ['label' => '26" (180% Density)', 'price' => 219.63],
+                        ['label' => '26" (200% Density)', 'price' => 230.02],
+                        ['label' => '26" (250% Density)', 'price' => 237.66],
+                        ['label' => '28" (180% Density)', 'price' => 247.62],
+                        ['label' => '28" (200% Density)', 'price' => 261.53],
+                        ['label' => '28" (250% Density)', 'price' => 265.23],
+                        ['label' => '30" (180% Density)', 'price' => 275.58],
+                        ['label' => '30" (200% Density)', 'price' => 291.65],
+                        ['label' => '30" (250% Density)', 'price' => 285.68],
+                    ],
+                ],
+            ],
+        ],
+
+        /*
+        |--------------------------------------------------------------------------
+        | 5. 360 lace wig - 100% virgin remy human hair - factory direct affordable price
+        |--------------------------------------------------------------------------
+        */
+        [
+            'id' => 'wholesale-360-lace-wig',
+            'name' => '360 HD Lace Wig (100% Virgin Remy Human Hair)',
+            'badge' => 'Premium',
+            'reviews' => 128,
+            'image' => 'assets/images/products/wholesale-360-lace-wig/image-1.jpg',
+            'gallery' => [
+                'assets/images/products/wholesale-360-lace-wig/image-1.jpg',
+                'assets/images/products/wholesale-360-lace-wig/image-2.jpg',
+                'assets/images/products/wholesale-360-lace-wig/image-3.jpg',
+                'assets/images/products/wholesale-360-lace-wig/image-4.jpg',
+                'assets/images/products/wholesale-360-lace-wig/image-5.jpg',
+                'assets/images/products/wholesale-360-lace-wig/image-6.jpg',
+                'assets/images/products/wholesale-360-lace-wig/image-7.jpg',
+                'assets/images/products/wholesale-360-lace-wig/image-8.jpg',
+                'assets/images/products/wholesale-360-lace-wig/image-9.jpg',
+                'assets/images/products/wholesale-360-lace-wig/image-10.jpg',
+                'assets/images/products/wholesale-360-lace-wig/image-11.jpg',
+                'assets/images/products/wholesale-360-lace-wig/image-12.jpg',
+            ],
+            'description' => '&nbsp; Textures available Loose deep, deep wave, loose wave, body wave, kinky curly, straight, water wave, kinky straight Hair Color Black Feature Undetectable, invisible, Bleached knots, Pre-plucked hairline, pre-cut lace, ready to go Hair Length...',
+            'details' => [
+                'Hair Material' => '100% Virgin Remy Human Hair',
+                'Hair Quality' => 'Factory Direct Premium Grade',
+                'Bleached Knots' => 'Clean Lightly Bleached Knots',
+                'Longevity' => '1–2+ Years with proper care',
+                'Styling' => 'Can be dyed, bleached, straightened & curled',
+                'Lace Type' => '360 HD Lace (Full Perimeter Lace)',
+                'Cap Construction' => '100% Glueless with Drawstring & Elastic Grip Band',
+                'Versatility' => 'High Ponytails, Buns & Free Parting',
+            ],
+            'bulk_discounts' => [],
+            'options' => [
+                [
+                    'name' => 'Length & Density',
+                    'type' => 'select',
+                    'required' => true,
+                    'values' => [
+                        ['label' => '16" (180% Density)', 'price' => 157.13],
+                        ['label' => '16" (200% Density)', 'price' => 161.72],
+                        ['label' => '16" (250% Density)', 'price' => 163.15],
+                        ['label' => '18" (180% Density)', 'price' => 174.26],
+                        ['label' => '18" (200% Density)', 'price' => 180.20],
+                        ['label' => '18" (250% Density)', 'price' => 180.22],
+                        ['label' => '20" (180% Density)', 'price' => 191.16],
+                        ['label' => '20" (200% Density)', 'price' => 196.23],
+                        ['label' => '20" (250% Density)', 'price' => 216.68],
+                        ['label' => '22" (180% Density)', 'price' => 213.05],
+                        ['label' => '22" (200% Density)', 'price' => 220.73],
+                        ['label' => '22" (250% Density)', 'price' => 241.93],
+                        ['label' => '24" (180% Density)', 'price' => 228.49],
+                        ['label' => '24" (200% Density)', 'price' => 237.45],
+                        ['label' => '24" (250% Density)', 'price' => 243.42],
+                        ['label' => '26" (180% Density)', 'price' => 247.19],
+                        ['label' => '26" (200% Density)', 'price' => 257.58],
+                        ['label' => '26" (250% Density)', 'price' => 266.83],
+                        ['label' => '28" (180% Density)', 'price' => 275.19],
+                        ['label' => '28" (200% Density)', 'price' => 289.09],
+                        ['label' => '28" (250% Density)', 'price' => 301.06],
+                        ['label' => '30" (180% Density)', 'price' => 303.14],
+                        ['label' => '30" (200% Density)', 'price' => 319.22],
+                        ['label' => '30" (250% Density)', 'price' => 326.40],
+                    ],
+                ],
+            ],
+        ],
+
+        /*
+        |--------------------------------------------------------------------------
+        | 6. Full lace wig - 100% virgin remy human hair wig - factory direct affordable price
+        |--------------------------------------------------------------------------
+        */
+        [
+            'id' => 'full-lace-wig',
+            'name' => 'Full Lace Wig (100% Virgin Remy Human Hair)',
+            'badge' => 'Luxury Choice',
+            'reviews' => 145,
+            'image' => 'assets/images/products/full-lace-wig/image-1.jpg',
+            'gallery' => [
+                'assets/images/products/full-lace-wig/image-1.jpg',
+                'assets/images/products/full-lace-wig/image-2.jpg',
+                'assets/images/products/full-lace-wig/image-3.jpg',
+                'assets/images/products/full-lace-wig/image-4.jpg',
+                'assets/images/products/full-lace-wig/image-5.jpg',
+                'assets/images/products/full-lace-wig/image-6.jpg',
+                'assets/images/products/full-lace-wig/image-7.jpg',
+                'assets/images/products/full-lace-wig/image-8.jpg',
+                'assets/images/products/full-lace-wig/image-9.jpg',
+                'assets/images/products/full-lace-wig/image-10.jpg',
+                'assets/images/products/full-lace-wig/image-11.jpg',
+            ],
+            'description' => '&nbsp; Textures available Loose deep, deep wave, loose wave, body wave, kinky curly, straight, water wave, kinky straight Hair Color Black Feature Undetectable, invisible, Bleached knots, Pre-plucked hairline, pre-cut lace, ready to go Hair Length...',
+            'details' => [
+                'Hair Material' => '100% Virgin Remy Human Hair',
+                'Hair Quality' => 'Factory Direct Premium Grade',
+                'Bleached Knots' => 'Clean Lightly Bleached Knots',
+                'Longevity' => '1–2+ Years with proper care',
+                'Styling' => 'Can be dyed, bleached, straightened & curled',
+                'Lace Type' => '100% Full Lace (All Hand-Tied)',
+                'Cap Construction' => 'Breathable Full Lace Cap with Stretch Middle',
+                'Versatility' => 'Part Anywhere, Braids, Updos & Ponytails',
+            ],
+            'bulk_discounts' => [],
+            'options' => [
+                [
+                    'name' => 'Length',
+                    'type' => 'select',
+                    'required' => true,
+                    'values' => [
+                        ['label' => '16"', 'price' => 161.81],
+                        ['label' => '18"', 'price' => 188.93],
+                        ['label' => '20"', 'price' => 220.90],
+                        ['label' => '22"', 'price' => 269.32],
+                    ],
+                ],
+            ],
+        ],
+
+        /*
+        |--------------------------------------------------------------------------
+        | 7. 13x4 HD lace frontal wigs - glueless beginner friendly 100% virgin remy human hair wigs with drawstring - factory direct affordable price
+        |--------------------------------------------------------------------------
+        */
+        [
+            'id' => '13x4-lace-front-wigs',
+            'name' => '13x4 HD Lace Frontal Wigs (Glueless Wear & Go)',
+            'badge' => 'Top Rated',
+            'reviews' => 112,
+            'image' => 'assets/images/products/13x4-lace-front-wigs/image-1.jpg',
+            'gallery' => [
+                'assets/images/products/13x4-lace-front-wigs/image-1.jpg',
+                'assets/images/products/13x4-lace-front-wigs/image-2.jpg',
+                'assets/images/products/13x4-lace-front-wigs/image-3.jpg',
+                'assets/images/products/13x4-lace-front-wigs/image-4.jpg',
+                'assets/images/products/13x4-lace-front-wigs/image-5.jpg',
+                'assets/images/products/13x4-lace-front-wigs/image-6.jpg',
+                'assets/images/products/13x4-lace-front-wigs/image-7.jpg',
+                'assets/images/products/13x4-lace-front-wigs/image-8.jpg',
+                'assets/images/products/13x4-lace-front-wigs/image-9.jpg',
+                'assets/images/products/13x4-lace-front-wigs/image-10.jpg',
+                'assets/images/products/13x4-lace-front-wigs/image-11.jpg',
+                'assets/images/products/13x4-lace-front-wigs/image-12.jpg',
+                'assets/images/products/13x4-lace-front-wigs/image-13.jpg',
+            ],
+            'description' => '&nbsp; Textures available Loose deep, deep wave, loose wave, body wave, kinky curly, straight, water wave, kinky straight Hair Color Natural color Feature Undetectable, invisible, Bleached knots, Pre-plucked hairline, pre-cut lace, ready to go Hai...',
+            'details' => [
+                'Hair Material' => '100% Virgin Remy Human Hair',
+                'Hair Quality' => 'Factory Direct Premium Grade',
+                'Bleached Knots' => 'Clean Lightly Bleached Knots',
+                'Longevity' => '1–2+ Years with proper care',
+                'Styling' => 'Can be dyed, bleached, straightened & curled',
+                'Lace Type' => '13x4 HD Swiss Lace',
+                'Cap Construction' => '100% Glueless Wear & Go with Drawstring & Elastic Band',
+                'Installation' => 'Beginner Friendly, 30-Second Wear, Zero Glue',
+            ],
+            'bulk_discounts' => [],
+            'options' => [
+                [
+                    'name' => 'Length & Density',
+                    'type' => 'select',
+                    'required' => true,
+                    'values' => [
+                        ['label' => '16" (180% Density)', 'price' => 147.35],
+                        ['label' => '16" (200% Density)', 'price' => 151.94],
+                        ['label' => '16" (250% Density)', 'price' => 170.09],
+                        ['label' => '18" (180% Density)', 'price' => 165.37],
+                        ['label' => '18" (200% Density)', 'price' => 171.31],
+                        ['label' => '18" (250% Density)', 'price' => 189.65],
+                        ['label' => '20" (180% Density)', 'price' => 181.73],
+                        ['label' => '20" (200% Density)', 'price' => 186.80],
+                        ['label' => '20" (250% Density)', 'price' => 203.87],
+                        ['label' => '22" (180% Density)', 'price' => 210.38],
+                        ['label' => '22" (200% Density)', 'price' => 218.07],
+                        ['label' => '22" (250% Density)', 'price' => 219.88],
+                        ['label' => '24" (180% Density)', 'price' => 225.82],
+                        ['label' => '24" (200% Density)', 'price' => 234.78],
+                        ['label' => '24" (250% Density)', 'price' => 251.00],
+                        ['label' => '26" (180% Density)', 'price' => 244.53],
+                        ['label' => '26" (200% Density)', 'price' => 254.91],
+                        ['label' => '26" (250% Density)', 'price' => 270.56],
+                        ['label' => '28" (180% Density)', 'price' => 272.52],
+                        ['label' => '28" (200% Density)', 'price' => 286.42],
+                        ['label' => '28" (250% Density)', 'price' => 298.13],
+                        ['label' => '30" (180% Density)', 'price' => 300.47],
+                        ['label' => '30" (200% Density)', 'price' => 316.55],
+                        ['label' => '30" (250% Density)', 'price' => 318.58],
+                    ],
+                ],
+            ],
+        ],
     ],
     'services' => [
         [

@@ -1,8 +1,8 @@
 @props(['item'])
 
-<div class="col-12 col-sm-6 col-lg-4">
+<div class="col-12 col-sm-6 col-lg-4 d-flex">
 
-  <div class="product-card position-relative overflow-hidden rounded-4 bg-card-custom gold-border">
+  <div class="product-card position-relative overflow-hidden rounded-4 bg-card-custom gold-border w-100 d-flex flex-column">
 
     {{-- Product Image --}}
     <a href="{{ route('shop.product', ['productId' => $item['id']]) }}" class="text-decoration-none d-block">
@@ -27,7 +27,7 @@
 
 
     {{-- Product Content --}}
-    <div class="p-4">
+    <div class="p-4 d-flex flex-column flex-grow-1">
 
       {{-- Rating --}}
       <div class="d-flex align-items-center justify-content-between">
@@ -46,7 +46,7 @@
 
 
       {{-- Product Name --}}
-      <h3 class="font-display text-foreground mt-2 mb-0" style="font-size:1.125rem;">
+      <h3 class="font-display text-foreground mt-2 mb-0" style="font-size:1.05rem; line-height:1.45; min-height:3.05rem; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;" title="{{ $item['name'] }}">
         <a href="{{ route('shop.product', ['productId' => $item['id']]) }}"
           class="text-decoration-none text-foreground">
           {{ $item['name'] }}
@@ -54,38 +54,41 @@
       </h3>
 
 
-      {{-- Starting Price --}}
-      @php
-        $firstOption = $item['options'][0] ?? null;
-        $firstValue = $firstOption['values'][0] ?? null;
-      @endphp
+      {{-- Bottom Section (Price, Button, Free Shipping) Aligned to Bottom --}}
+      <div class="mt-auto pt-3">
 
-      @if ($firstValue)
-        <div class="mt-2">
+        {{-- Starting Price --}}
+        @php
+          $firstOption = $item['options'][0] ?? null;
+          $firstValue = $firstOption['values'][0] ?? null;
+        @endphp
 
-          <span style="font-size:0.7rem; color:rgba(245,242,240,0.5); text-transform:uppercase; letter-spacing:0.12em;">
-            From
-          </span>
+        @if ($firstValue)
+          <div>
+            <span style="font-size:0.7rem; color:rgba(245,242,240,0.5); text-transform:uppercase; letter-spacing:0.12em;">
+              From
+            </span>
 
-          <span class="font-display text-gold-gradient ms-1" style="font-size:1.35rem;">
-            {{ config('site.currency_symbol', '$') }}{{ number_format($firstValue['price'], 2) }}
-          </span>
+            <span class="font-display text-gold-gradient ms-1" style="font-size:1.35rem;">
+              {{ config('site.currency_symbol', '£') }}{{ number_format($firstValue['price'], 2) }}
+            </span>
+          </div>
+        @endif
 
+
+        {{-- View Product --}}
+        <a href="{{ route('shop.product', ['productId' => $item['id']]) }}"
+          class="btn-luxe w-100 mt-3 text-decoration-none text-center d-block">
+          <i class="bi bi-eye me-1"></i>
+          View Product
+        </a>
+
+
+        <div class="text-end mt-2"
+          style="font-size:0.65rem; text-transform:uppercase; letter-spacing:0.2em; color:rgba(245,242,240,0.6);">
+          Free shipping
         </div>
-      @endif
 
-
-      {{-- View Product --}}
-      <a href="{{ route('shop.product', ['productId' => $item['id']]) }}"
-        class="btn-luxe w-100 mt-3 text-decoration-none text-center d-block">
-        <i class="bi bi-eye me-1"></i>
-        View Product
-      </a>
-
-
-      <div class="text-end mt-2"
-        style="font-size:0.65rem; text-transform:uppercase; letter-spacing:0.2em; color:rgba(245,242,240,0.6);">
-        Free shipping
       </div>
 
     </div>
