@@ -29,7 +29,7 @@
             <span class="cart-badge">{{ $cartTotalQty }}</span>
           @endif
         </a>
-        <a href="{{ request()->routeIs('home') ? '#booking' : route('home') . '#booking' }}" class="btn-luxe d-none d-md-inline-flex ms-2">Book Appointment</a>
+        <a href="https://wa.me/{{ ltrim(config('site.phone', '+447539593290'), '+') }}" target="_blank" rel="noopener" class="btn-luxe d-none d-md-inline-flex ms-2">Book Appointment</a>
         <button id="menuToggle" class="icon-btn d-lg-none" aria-label="Menu"><i id="menuIcon" class="bi bi-list fs-5"></i></button>
       </div>
     </div>
@@ -45,7 +45,7 @@
         @endphp
         <a href="{{ $mobileHref }}" class="nav-link-luxe text-decoration-none mobile-link">{{ $link['label'] }}</a>
       @endforeach
-      <a href="{{ request()->routeIs('home') ? '#booking' : route('home') . '#booking' }}" class="btn-luxe mt-2 w-100 text-center text-decoration-none mobile-link">Book Appointment</a>
+      <a href="https://wa.me/{{ ltrim(config('site.phone', '+447539593290'), '+') }}" target="_blank" rel="noopener" class="btn-luxe mt-2 w-100 text-center text-decoration-none mobile-link">Book Appointment</a>
     </div>
   </div>
 </header>

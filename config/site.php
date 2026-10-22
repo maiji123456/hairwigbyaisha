@@ -645,10 +645,6 @@ return [
             'label' => 'Shop',
         ],
         [
-            'href' => '#services',
-            'label' => 'Hair Services',
-        ],
-        [
             'href' => '#wax',
             'label' => 'Hair Wax',
         ],
@@ -659,10 +655,6 @@ return [
         [
             'href' => '#testimonials',
             'label' => 'Testimonials',
-        ],
-        [
-            'href' => '#about',
-            'label' => 'About',
         ],
         [
             'href' => '#contact',
@@ -679,16 +671,12 @@ return [
             'label' => 'Shop',
         ],
         [
-            'href' => '#services',
-            'label' => 'Services',
-        ],
-        [
             'href' => '#gallery',
             'label' => 'Gallery',
         ],
         [
-            'href' => '#about',
-            'label' => 'About',
+            'href' => '#testimonials',
+            'label' => 'Testimonials',
         ],
         [
             'href' => '#contact',
