@@ -306,10 +306,22 @@
     .product-title {
         font-family: var(--font-display, 'Cormorant Garamond', serif);
         margin: 0 0 16px;
-        font-size: clamp(2.2rem, 3.2vw, 3rem);
-        line-height: 1.15;
+        font-size: clamp(2.2rem, 3.4vw, 3.2rem);
+        line-height: 1.2;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        color: #FFFFFF;
+        text-shadow: 0 2px 25px rgba(0, 0, 0, 0.6);
+    }
+
+    .product-title-tag-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #E8C96A 0%, #E8B8C7 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-style: italic;
         font-weight: 500;
-        color: #F5F2F0;
     }
 
     .product-description {
@@ -825,8 +837,18 @@
                     </span>
                 </div>
 
+                @php
+                    $pName = $product['name'];
+                    $hasParen = preg_match('/^(.*?)\s*(\(.*?\))\s*$/', $pName, $pMatches);
+                    $mainPTitle = $hasParen ? trim($pMatches[1]) : $pName;
+                    $subPTitle = $hasParen ? trim($pMatches[2]) : null;
+                @endphp
+
                 <h1 class="product-title">
-                    {{ $product['name'] }}
+                    {{ $mainPTitle }}
+                    @if ($subPTitle)
+                        <span class="product-title-tag-badge ms-1">{{ $subPTitle }}</span>
+                    @endif
                 </h1>
 
                 @if(!empty($product['description']))

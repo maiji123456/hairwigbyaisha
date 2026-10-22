@@ -46,10 +46,19 @@
 
 
       {{-- Product Name --}}
-      <h3 class="font-display text-foreground mt-2 mb-0" style="font-size:1.05rem; line-height:1.45; min-height:3.05rem; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;" title="{{ $item['name'] }}">
-        <a href="{{ route('shop.product', ['productId' => $item['id']]) }}"
-          class="text-decoration-none text-foreground">
-          {{ $item['name'] }}
+      @php
+        $fullName = $item['name'];
+        $hasParen = preg_match('/^(.*?)\s*(\(.*?\))\s*$/', $fullName, $matches);
+        $mainTitle = $hasParen ? trim($matches[1]) : $fullName;
+        $subTitle = $hasParen ? trim($matches[2]) : null;
+      @endphp
+
+      <h3 class="product-card-title mt-2 mb-0" title="{{ $item['name'] }}">
+        <a href="{{ route('shop.product', ['productId' => $item['id']]) }}" class="product-title-link text-decoration-none">
+          <span class="product-title-main">{{ $mainTitle }}</span>
+          @if ($subTitle)
+            <span class="product-title-tag ms-1">{{ $subTitle }}</span>
+          @endif
         </a>
       </h3>
 

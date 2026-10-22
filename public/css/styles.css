@@ -271,6 +271,7 @@ img { max-width: 100%; }
 .text-foreground-75 { color: rgba(245,242,240,0.75); }
 .text-foreground-85 { color: rgba(245,242,240,0.85); }
 .text-foreground-90 { color: rgba(245,242,240,0.9); }
+.text-foreground { color: var(--foreground, #F5F2F0); }
 
 .bg-ink-dark { background-color: #141414; }
 .bg-ink-light { background-color: #1C1C1C; }
@@ -325,9 +326,67 @@ img { max-width: 100%; }
   transition: all 0.5s;
 }
 
+.product-card {
+  background: linear-gradient(180deg, #181818 0%, #121212 100%) !important;
+  border: 1px solid rgba(200, 162, 90, 0.35) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(232, 201, 106, 0.65) !important;
+  box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.8), 0 0 25px rgba(232, 201, 106, 0.2) !important;
+}
+
+.product-card-title {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  min-height: 3.05rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-title-link {
+  color: #FFFFFF !important;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  display: inline;
+}
+
+.product-card-title .product-title-main {
+  color: #FFFFFF;
+  transition: color 0.3s ease;
+}
+
+.product-card-title .product-title-tag {
+  color: #E8C96A;
+  font-weight: 500;
+  font-size: 0.9em;
+  letter-spacing: 0.01em;
+  transition: color 0.3s ease;
+}
+
+.product-card:hover .product-title-link,
+.product-title-link:hover,
+.product-card:hover .product-title-main {
+  color: #E8C96A !important;
+  text-shadow: 0 0 14px rgba(232, 201, 106, 0.45);
+}
+
+.product-card:hover .product-title-tag {
+  color: #F8E8EE !important;
+  text-shadow: 0 0 10px rgba(232, 184, 199, 0.6);
+}
+
 .product-card:hover .product-btn { opacity: 1; transform: translateY(0) translateX(-50%); }
 .product-card:hover .product-actions { opacity: 1; }
-.product-card:hover .product-img { transform: scale(1.1); }
+.product-card:hover .product-img { transform: scale(1.08); }
 
 .product-img { transition: transform 0.9s; }
 .product-actions { opacity: 0; transition: opacity 0.3s; }
